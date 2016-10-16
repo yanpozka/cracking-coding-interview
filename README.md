@@ -1,5 +1,5 @@
-# cracking-coding-interview
+### My answer for the book Cracking the Coding Interview (fifth edition)
 
-TODO:
-[] Separate in files.
-[] Compile them.
+TODOs:
+- [ ] Separate in files.
+- [ ] Compile them.
