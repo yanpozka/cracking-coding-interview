@@ -1,4 +1,6 @@
-package main
+package treesGraphs
+
+import "testing"
 
 type binaryTree struct {
 	left  *binaryTree
@@ -46,4 +48,15 @@ func testEq(a, b []int) bool {
 		}
 	}
 	return true
+}
+
+// https://play.golang.org/p/mz_ImRDf_i
+//
+func TestMakeTree(t *testing.T) {
+	a := []int{1, 3, 4, 5, 6, 7, 8, 11, 13, 14, 15, 16, 20, 24}
+	b := inOrder(makeTree(a))
+
+	if testEq(ns, r) == false {
+		t.Fatalf("Non equals slices: %v and %v \n", a, b)
+	}
 }
