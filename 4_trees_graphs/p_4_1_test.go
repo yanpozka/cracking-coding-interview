@@ -3,20 +3,20 @@ package main
 
 import "math"
 
-type BinaryTree struct {
-	left  *BinaryTree
-	right *BinaryTree
+type binaryTree struct {
+	left  *binaryTree
+	right *binaryTree
 	data  int
 }
 
-func height(root *BinaryTree) int {
+func height(root *binaryTree) int {
 	if root == nil {
 		return 0
 	}
 	return 1 + math.Max(float64(height(root.left)), float64(height(root.right)))
 }
 
-func isBalanced(root *BinaryTree) bool {
+func isBalanced(root binaryTree) bool {
 	if root == nil {
 		return true
 	}
