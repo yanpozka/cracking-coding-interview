@@ -1,5 +1,5 @@
 // 4.1
-package main
+package treesGraphs
 
 import "math"
 
