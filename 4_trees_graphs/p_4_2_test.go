@@ -1,5 +1,5 @@
 // 4.2
-package main
+package treesGraphs
 
 import "container/list"
 
