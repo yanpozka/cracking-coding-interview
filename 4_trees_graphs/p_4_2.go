@@ -1,5 +1,5 @@
 // 4.2
-package treesGraphs
+package main
 
 import "container/list"
 
@@ -15,7 +15,7 @@ func existRoute(Graph [N][N]int, x, y int) bool {
 	queue.PushBack(x)
 
 	for queue.Len() > 0 {
-		node := queue.First()
+		node := queue.Front()
 		current_vertex := node.Value.(int)
 		queue.Remove(node)
 
@@ -25,10 +25,13 @@ func existRoute(Graph [N][N]int, x, y int) bool {
 					return true
 				}
 				visited[ix] = true
-				queue[queueCount] = ix
-				queueCount++
+
+				queue.PushBack(ix)
 			}
 		}
 	}
 	return false
+}
+
+func main() {
 }

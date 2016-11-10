@@ -1,7 +1,7 @@
 // 4.3
-package treesGraphs
+package main
 
-import "testing"
+import "fmt"
 
 type binaryTree struct {
 	left  *binaryTree
@@ -53,11 +53,14 @@ func testEq(a, b []int) bool {
 
 // https://play.golang.org/p/mz_ImRDf_i
 //
-func TestMakeTree(t *testing.T) {
+func main() {
 	a := []int{1, 3, 4, 5, 6, 7, 8, 11, 13, 14, 15, 16, 20, 24}
-	b := inOrder(makeTree(a))
+	tree := makeTree(a)
+	fmt.Println(tree.data, "-->", tree.left.data, tree.right.data)
+	b := inOrder(tree)
 
-	if testEq(ns, r) == false {
-		t.Fatalf("Non equals slices: %v and %v \n", a, b)
+	if testEq(a, b) == false {
+		fmt.Printf("Non equals slices: %v and %v \n", a, b)
 	}
+	fmt.Println(a, "==", b)
 }

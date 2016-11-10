@@ -1,5 +1,5 @@
 // 4.1
-package treesGraphs
+package main
 
 import "math"
 
@@ -13,13 +13,16 @@ func height(root *binaryTree) int {
 	if root == nil {
 		return 0
 	}
-	return 1 + math.Max(float64(height(root.left)), float64(height(root.right)))
+	return 1 + int(math.Max(float64(height(root.left)), float64(height(root.right))))
 }
 
-func isBalanced(root binaryTree) bool {
+func isBalanced(root *binaryTree) bool {
 	if root == nil {
 		return true
 	}
 
 	return math.Abs(float64(height(root.left)-height(root.right))) < 1
+}
+
+func main() {
 }
