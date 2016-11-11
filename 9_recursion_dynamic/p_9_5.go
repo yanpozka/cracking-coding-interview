@@ -31,6 +31,8 @@ func permutations(str string) *list.List {
 	return result
 }
 
+// https://play.golang.org/p/t2qmo99_N_
+//
 func main() {
 	str := "abc"
 	l := permutations(str)
