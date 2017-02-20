@@ -34,7 +34,7 @@ func permutations(str string) *list.List {
 // https://play.golang.org/p/t2qmo99_N_
 //
 func main() {
-	str := "abc"
+	str := "abcd"
 	l := permutations(str)
 
 	fmt.Println(l.Len(), "==", fac(len(str)))
