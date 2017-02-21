@@ -35,7 +35,8 @@ func main() {
 		{0, 0, 0, 0},
 	}
 	genSolution(matrix, len(matrix), len(matrix[0]))
-	fmt.Println(matrix)
+
+	fmt.Println("solution:", matrix[0][0])
 
 	matrix = [][]int{
 		{0, 0, 0, 0, 0, 0, 0, 0},
@@ -50,5 +51,5 @@ func main() {
 
 	genSolution(matrix, len(matrix), len(matrix[0]))
 
-	fmt.Println(matrix)
+	fmt.Println("solution:", matrix[0][0])
 }
